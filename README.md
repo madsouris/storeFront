@@ -15,6 +15,7 @@
 
 ### Todo
 
+-   [x] Initial project setup and play around
 -   [ ] Structurize folders and component files
 -   [ ] Create fake JSON server for fake data
 -   [ ] On-page theme switcher
