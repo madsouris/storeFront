@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+# Hangme Store Front Client
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### How to run
 
-## Recommended IDE Setup
+-   Clone
+-   `npm install`
+-   `npm run dev`
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+### Tech
+
+-   Vitejs
+-   Tailwind CSS
+-   Daisy UI as Tailwind plugin
+-   Bootstrap like grid as Tailwind plugin
+
+### Todo
+
+-   [] Structurize folders and component files
+-   [] Create fake JSON server for fake data
+-   [] On-page theme switcher
+-   [] Improved this readme
