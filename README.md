@@ -19,4 +19,5 @@
 -   [ ] Structurize folders and component files
 -   [ ] Create fake JSON server for fake data
 -   [ ] On-page theme switcher
+-   [ ] Dark mode
 -   [ ] Improved this readme
