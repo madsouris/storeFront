@@ -15,7 +15,7 @@
 
 ### Todo
 
--   [] Structurize folders and component files
--   [] Create fake JSON server for fake data
--   [] On-page theme switcher
--   [] Improved this readme
+-   [ ] Structurize folders and component files
+-   [ ] Create fake JSON server for fake data
+-   [ ] On-page theme switcher
+-   [ ] Improved this readme
