@@ -16,8 +16,8 @@
 ### Todo
 
 -   [x] Initial project setup and play around
--   [ ] Structurize folders and component files
+-   [x] Structurize folders and component files
 -   [ ] Create fake JSON server for fake data
--   [ ] On-page theme switcher
--   [ ] Dark mode
+-   [x] On-page theme switcher
+-   [x] Dark mode
 -   [ ] Improved this readme

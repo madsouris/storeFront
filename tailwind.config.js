@@ -13,6 +13,7 @@ module.exports = {
                 lg: "960px",
                 xl: "1140px",
             },
+            generateContainer: false,
         }),
     ],
     // daisyUI config (optional)
