@@ -2,22 +2,27 @@
 
 ### How to run
 
--   Clone
--   `npm install`
--   `npm run dev`
+- Clone
+- `npm install`
+- `npm run dev`
+
+### Run API
+
+- `cd src/assets/`
+- `json-server --watch data.json --port 3500`
 
 ### Tech
 
--   Vitejs
--   Tailwind CSS
--   Daisy UI as Tailwind plugin
--   Bootstrap like grid as Tailwind plugin
+- Vitejs
+- Tailwind CSS
+- Daisy UI as Tailwind plugin
+- Bootstrap like grid as Tailwind plugin
 
 ### Todo
 
--   [x] Initial project setup and play around
--   [x] Structurize folders and component files
--   [ ] Create fake JSON server for fake data
--   [x] On-page theme switcher
--   [x] Dark mode
--   [ ] Improved this readme
+- [x] Initial project setup and play around
+- [x] Structurize folders and component files
+- [-] Create fake JSON server for fake data
+- [x] On-page theme switcher
+- [x] Dark mode
+- [ ] Improved this readme

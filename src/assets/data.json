@@ -1,0 +1,13 @@
+{
+  "store": [
+    {
+      "name": "Souris Collection",
+      "tagline": "We sell only products with bizzare name"
+    }
+  ],
+  "product": [
+    { "id": 1, "name": "Big ass shoes for woman", "price": 35.5 },
+    { "id": 2, "name": "Minteral water to clean ass", "price": 33.0 },
+    { "id": 3, "name": "Definitely not a drug", "price": 29.03 }
+  ]
+}
