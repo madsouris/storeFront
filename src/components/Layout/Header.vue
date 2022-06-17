@@ -26,15 +26,17 @@ export default {
     name: 'Header',
   },
   async created() {
-    const response = await fetch('http://localhost:3500/store/0');
+    const response = await fetch(
+      'https://api.hangme-staging.app/api/v2/marketplace/stores/2'
+    );
     const data = await response.json();
     this.store = data.name;
-    this.tagline = data.tagline;
+    this.tagline = data.color;
   },
   data() {
     return {
       store: null,
-      tagline: null,
+      color: null,
     };
   },
 };

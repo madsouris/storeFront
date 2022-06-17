@@ -48,7 +48,7 @@ export default {
     name: 'MainContent',
   },
   created() {
-    fetch('http://localhost:3500/product')
+    fetch('https://api.hangme-staging.app/api/v2/marketplace/stores/2/products')
       .then((response) => response.json())
       .then((data) => (this.products = data));
   },

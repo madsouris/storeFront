@@ -25,5 +25,6 @@
 - [x] Create fake JSON server for fake data
 - [x] On-page theme switcher
 - [x] Dark mode
+- [ ] Clone store front
 - [ ] Global API fetch
 - [ ] Improved this readme
