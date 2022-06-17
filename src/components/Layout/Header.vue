@@ -4,7 +4,9 @@
       <h3 class="font-bold text-3xl tracking-tight">
         {{ store }}
       </h3>
-      <p>Store theme demo</p>
+      <p>
+        {{ tagline }}
+      </p>
     </div>
     <div class="col-12 md:col-6 text-right">
       <select class="select select-bordered w-full max-w-xs" data-choose-theme>
@@ -24,13 +26,15 @@ export default {
     name: 'Header',
   },
   async created() {
-    const response = await fetch('http://localhost:3500/store');
-    const { data: store } = await response.json();
-    this.store = store;
+    const response = await fetch('http://localhost:3500/store/0');
+    const data = await response.json();
+    this.store = data.name;
+    this.tagline = data.tagline;
   },
   data() {
     return {
-      store: {},
+      store: null,
+      tagline: null,
     };
   },
 };
