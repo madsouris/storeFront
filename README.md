@@ -22,7 +22,8 @@
 
 - [x] Initial project setup and play around
 - [x] Structurize folders and component files
-- [-] Create fake JSON server for fake data
+- [x] Create fake JSON server for fake data
 - [x] On-page theme switcher
 - [x] Dark mode
+- [ ] Global API fetch
 - [ ] Improved this readme
