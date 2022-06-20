@@ -26,5 +26,6 @@
 - [x] On-page theme switcher
 - [x] Dark mode
 - [ ] Clone store front
+- [ ] Implement AlpineJS for interactions
 - [ ] Global API fetch
 - [ ] Improved this readme
