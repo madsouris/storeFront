@@ -1,21 +1,17 @@
 <template>
   <header class="row mb-4 pb-4 border-b border-gray-100 items-center">
     <div class="col-12 md:col-6">
-      <h3 class="font-bold text-3xl tracking-tight">
-        {{ store }}
-      </h3>
+      <router-link to="/">
+        <h3 class="font-bold text-3xl tracking-tight">
+          {{ store }}
+        </h3>
+      </router-link>
       <p>
-        {{ tagline }}
+        {{ color }}
       </p>
-    </div>
-    <div class="col-12 md:col-6 text-right">
-      <select class="select select-bordered w-full max-w-xs" data-choose-theme>
-        <option value="lofi">Lofi</option>
-        <option value="winter" selected>Winter</option>
-        <option value="night">Night</option>
-        <option value="coffee">Coffee</option>
-        <option value="bumblebee">Bumblebee</option>
-      </select>
+      <router-link to="/contact">
+        <button>Contact</button>
+      </router-link>
     </div>
   </header>
 </template>
@@ -31,7 +27,7 @@ export default {
     );
     const data = await response.json();
     this.store = data.name;
-    this.tagline = data.color;
+    this.color = data.color;
   },
   data() {
     return {
