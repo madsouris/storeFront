@@ -4,14 +4,14 @@ import {
   createWebHistory,
 } from 'vue-router';
 
-import MainContent from '../components/Layout/MainContent.vue';
+import Home from '../components/Pages/Home.vue';
 import Contact from '../components/Pages/Contact.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: MainContent,
+    name: 'Home',
+    component: Home,
   },
   {
     path: '/contact',

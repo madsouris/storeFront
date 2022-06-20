@@ -25,7 +25,7 @@
 import Product from '../Product/Product.vue';
 export default {
   components: {
-    name: 'MainContent',
+    name: 'Home',
     Product,
   },
 };
