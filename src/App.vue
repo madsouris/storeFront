@@ -1,5 +1,7 @@
 <template>
-  <section class="container mx-auto p-4 min-h-screen" data-theme="chinebear">
+  <section
+    class="container-fluid min-h-screen overflow-x-hidden"
+    data-theme="chinebear">
     <Header />
     <router-view></router-view>
     <Footer />
@@ -17,3 +19,9 @@ export default {
   },
 };
 </script>
+
+<style>
+:root {
+  --custom-color: #2196f3;
+}
+</style>

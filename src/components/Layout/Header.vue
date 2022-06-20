@@ -1,17 +1,38 @@
 <template>
-  <header class="row mb-4 pb-4 border-b border-gray-100 items-center">
-    <div class="col-12 md:col-6">
-      <router-link to="/">
-        <h3 class="font-bold text-3xl tracking-tight">
-          {{ name.charAt(0).toUpperCase() }}
-        </h3>
-      </router-link>
-      <p>
-        {{ color }}
-      </p>
-      <router-link to="/contact">
-        <button class="text-primary">Contact</button>
-      </router-link>
+  <header class="shadow-xl sticky top-0">
+    <div class="container mx-auto">
+      <div class="row mb-4 items-center">
+        <div
+          class="col-12 flex flex-row no-wrap justify-between items-center p-6">
+          <router-link to="/">
+            <p>
+              <span
+                class="font-bold text-3xl tracking-tight text-white bg-primary py-2 px-4">
+                {{ name }}
+              </span>
+              <span
+                class="text-primary ml-2 align-super font-medium hidden md:inline-block">
+                {{ nameFull }}
+              </span>
+            </p>
+          </router-link>
+          <!-- 
+            This is how to use custom color
+            <p class="text-[color:var(--custom-color)]">
+            {{ color }}
+          </p> -->
+          <div>
+            <button class="btn btn-outline btn-primary">
+              ⍜ Cart
+
+              <span class="bg-red-500 text-white rounded-full p-1 ml-1">
+                12
+              </span>
+            </button>
+            <button class="btn btn-outline btn-primary ml-2">⌘ Menu</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -24,12 +45,14 @@ export default {
   },
   async created() {
     await getStore();
-    this.name = storeData.data.name;
+    this.name = storeData.data.name.charAt(0).toUpperCase();
+    this.nameFull = storeData.data.name;
     this.color = storeData.data.color;
   },
   data() {
     return {
       name: null,
+      nameFull: null,
       color: null,
     };
   },
