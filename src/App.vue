@@ -60,7 +60,6 @@
           <button class="btn btn-outline btn-primary mr-2">USD</button>
           <button class="btn btn-outline btn-primary">KHR</button>
         </div>
-        <div class="divider"></div>
       </ul>
     </div>
   </div>

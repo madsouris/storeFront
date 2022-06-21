@@ -1,6 +1,6 @@
 <template>
   <h1 v-if="!products">Loading</h1>
-  <div class="col-12 md:col-4 lg:col-3 mb-4" v-for="product in products">
+  <div class="col-12 md:col-4 lg:col-3 mb-4 z-0" v-for="product in products">
     <div
       class="card bg-base-100 shadow-xl hover:cursor-pointer border border-transparent hover:border-blue-500 transition-all">
       <figure>

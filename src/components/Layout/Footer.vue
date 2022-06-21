@@ -27,7 +27,12 @@
           <div>
             <span class="footer-title">Support</span>
             <a class="link link-hover">Customer support</a>
-            <a class="link link-hover">Contact us</a>
+            <router-link to="/contact" class="link link-hover">
+              Contact us
+            </router-link>
+            <router-link class="link link-hover" to="/">
+              Contact Hangme
+            </router-link>
             <a class="link link-hover">My account</a>
           </div>
           <div>

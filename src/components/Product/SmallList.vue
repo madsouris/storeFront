@@ -1,8 +1,8 @@
 <template>
-  <section class="flex flex-row flex-nowrap mb-4">
+  <section class="flex flex-row flex-nowrap hover:bg-slate-50 p-4">
     <img
-      class="mask mask-squircle w-16 h-16 mr-2"
-      src="https://api.lorem.space/image/fashion?w=200&h=200"
+      class="mask mask-squircle w-16 h-16 mr-2 object-cover"
+      src="http://placekitten.com/g/200/300"
       alt="Shoes" />
     <div class="flex flex-col flex-wrap">
       <p class="font-bold text-clip">Some fashion shit</p>
@@ -10,7 +10,7 @@
       <p class="flex flex-row">
         <button class="btn btn-outline btn-primary btn-xs">-</button>
         <span class="mx-2">1</span>
-        <button class="btn btn-outline btn-primary btn-xs">-</button>
+        <button class="btn btn-outline btn-primary btn-xs">+</button>
       </p>
     </div>
   </section>

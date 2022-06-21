@@ -1,9 +1,8 @@
 <template>
-  <header class="shadow-xl">
-    <div class="container mx-auto">
-      <div class="row mb-4 items-center">
-        <div
-          class="col-12 flex flex-row no-wrap justify-between items-center p-6">
+  <header class="shadow-xl sticky top-0 z-50 bg-white px-4 md:px-0 py-6">
+    <div class="container mx-auto p-0">
+      <div class="row items-center">
+        <div class="col-12 flex flex-row no-wrap justify-between items-center">
           <router-link to="/">
             <p>
               <span
@@ -31,10 +30,11 @@
               </div>
               <ul
                 tabindex="0"
-                class="dropdown-content menu p-4 shadow-xl bg-base-100 rounded-box w-96">
+                class="dropdown-content menu shadow-xl bg-base-100 rounded-box w-96">
+                <li class="p-4 font-bold text-xl">Cart</li>
                 <SmallList v-for="product in 4" :key="product" />
                 <div
-                  class="flex flex-row flex-nowrap justify-between items-center mb-4">
+                  class="flex flex-row flex-nowrap justify-between items-center p-4">
                   <p class="text-secondary">Subtotal</p>
                   <p class="font-bold text-primary">$3323.99</p>
                 </div>
