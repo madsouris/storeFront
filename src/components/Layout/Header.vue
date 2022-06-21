@@ -1,5 +1,5 @@
 <template>
-  <header class="shadow-xl sticky top-0">
+  <header class="shadow-xl">
     <div class="container mx-auto">
       <div class="row mb-4 items-center">
         <div
@@ -22,14 +22,30 @@
             {{ color }}
           </p> -->
           <div>
-            <button class="btn btn-outline btn-primary">
-              ⍜ Cart
-
-              <span class="bg-red-500 text-white rounded-full p-1 ml-1">
-                12
-              </span>
-            </button>
-            <button class="btn btn-outline btn-primary ml-2">⌘ Menu</button>
+            <div class="dropdown dropdown-end">
+              <div class="indicator">
+                <span class="indicator-item badge badge-primary">99+</span>
+                <label tabindex="0" class="btn btn-outline btn-primary">
+                  ⍜ Cart
+                </label>
+              </div>
+              <ul
+                tabindex="0"
+                class="dropdown-content menu p-4 shadow-xl bg-base-100 rounded-box w-96">
+                <SmallList v-for="product in 4" :key="product" />
+                <div
+                  class="flex flex-row flex-nowrap justify-between items-center mb-4">
+                  <p class="text-secondary">Subtotal</p>
+                  <p class="font-bold text-primary">$3323.99</p>
+                </div>
+                <button class="btn btn-primary w-full">Checkout</button>
+              </ul>
+            </div>
+            <label
+              for="menu-drawer"
+              class="btn btn-outline btn-primary drawer-button ml-2">
+              ⌘ Menu
+            </label>
           </div>
         </div>
       </div>
@@ -39,9 +55,11 @@
 
 <script>
 import { getStore, storeData } from '../../data';
+import SmallList from '../Product/SmallList.vue';
 export default {
   components: {
     name: 'Header',
+    SmallList,
   },
   async created() {
     await getStore();
