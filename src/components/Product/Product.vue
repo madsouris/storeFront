@@ -1,8 +1,12 @@
 <template>
   <h1 v-if="!products">Loading</h1>
-  <div class="col-12 md:col-4 lg:col-3 mb-4 z-0" v-for="product in products" :key="product">
+  <div
+    class="col-12 md:col-4 lg:col-3 mb-4 z-0"
+    v-for="product in products"
+    :key="product">
     <div
-      class="card bg-base-100 shadow-xl hover:cursor-pointer border border-transparent hover:border-blue-500 transition-all" @click="openLink(product.id)">
+      class="card bg-base-100 shadow-xl hover:cursor-pointer border border-transparent hover:border-blue-500 transition-all"
+      @click="openLink(product)">
       <figure>
         <img
           class="image-full"
@@ -22,7 +26,7 @@
 </template>
 
 <script>
-import router from '../../router'
+import router from '../../router';
 export default {
   components: {
     name: 'Product',
@@ -35,9 +39,15 @@ export default {
     this.products = data;
   },
   methods: {
-    openLink(id) {
-      router.push(`/product/${id}`)
-    }
+    openLink(product) {
+      router.push({
+        name: 'Product',
+        params: {
+          id: product.id,
+          product: JSON.stringify(product),
+        },
+      });
+    },
   },
   data() {
     return {

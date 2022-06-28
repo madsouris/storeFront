@@ -6,7 +6,7 @@ import {
 
 import Home from '../components/Pages/Home.vue';
 import Contact from '../components/Pages/Contact.vue';
-import ProductView from '../components/Pages/ProductView.vue'
+import ProductView from '../components/Pages/ProductView.vue';
 
 const routes = [
   {
@@ -23,7 +23,7 @@ const routes = [
     path: '/product/:id',
     name: 'Product',
     component: ProductView,
-  }
+  },
 ];
 
 const router = createRouter({

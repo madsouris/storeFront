@@ -1,19 +1,25 @@
 <template>
-    <h1>
-        Product page
-    </h1>
-    <p>
-        {{ $route.params.name}}
-    </p>
-    <p>
-        {{ $route.params.id }}
-    </p>
+  <h1>Product page</h1>
+  <p>
+    {{ product.name }}
+  </p>
 </template>
 
 <script>
+import { onMounted } from '@vue/runtime-core';
+import { useRoute } from 'vue-router';
 export default {
-    components: {
-        name: 'ProductView'
-    }
-}
+  components: {
+    name: 'ProductView',
+  },
+  setup() {
+    const route = useRoute();
+    console.log(route.params.product);
+
+    const product = JSON.parse(route.params.product);
+    return {
+      product,
+    };
+  },
+};
 </script>
