@@ -3,21 +3,38 @@
   <p>
     {{ product.name }}
   </p>
+  <p>
+    {{ product.price }}
+  </p>
 </template>
 
 <script lang="ts">
 import { useRoute } from 'vue-router';
+import axios from 'axios';
 export default {
   components: {
     name: 'ProductView',
   },
-  setup() {
+  async created() {
     const route = useRoute();
-    console.log(route.params.product);
-
-    //const product = JSON.parse(route.params.product);
+    const id: any = route.params.id;
+    console.log(id);
+    try {
+      const response = await axios.get(
+        'https://api.hangme-staging.app/api/v2/marketplace/products/' + id
+      );
+      console.log(typeof response.data);
+      this.product = response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  data() {
     return {
-      // product,
+      product: {
+        name: null,
+        price: null,
+      },
     };
   },
 };

@@ -8,7 +8,7 @@
     :key="product">
     <div
       class="card bg-base-100 shadow-xl hover:cursor-pointer border border-transparent hover:border-blue-500 transition-all"
-      @click="openLink(product.id)">
+      @click.native="$router.push('/product/' + product.id)">
       <figure>
         <img
           class="image-full"
@@ -29,6 +29,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import router from '../../router';
 import axios from 'axios';
 export default defineComponent({
   name: 'Product',
@@ -43,11 +44,6 @@ export default defineComponent({
     } catch (error) {
       console.error(error);
     }
-  },
-  methods: {
-    openLink(string: Number) {
-      alert(string);
-    },
   },
   data() {
     return {
