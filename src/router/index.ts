@@ -2,27 +2,24 @@ import {
   createRouter,
   createWebHashHistory,
   createWebHistory,
+  RouteRecordRaw,
 } from 'vue-router';
 
-import Home from '../components/Pages/Home.vue';
-import Contact from '../components/Pages/Contact.vue';
-import ProductView from '../components/Pages/ProductView.vue';
-
-const routes = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: () => import('../components/Pages/Home.vue'),
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: Contact,
+    component: () => import('../components/Pages/Contact.vue'),
   },
   {
     path: '/product/:id',
     name: 'Product',
-    component: ProductView,
+    component: () => import('../components/Pages/ProductView.vue'),
   },
 ];
 

@@ -15,6 +15,8 @@ module.exports = {
       },
       generateContainer: false,
     }),
+    require('@tailwindcss/typography'),
+    require('daisyui'),
   ],
   // daisyUI config (optional)
   daisyui: {

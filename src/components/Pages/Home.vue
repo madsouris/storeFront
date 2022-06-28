@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Product from '../Product/Product.vue';
 export default {
   components: {

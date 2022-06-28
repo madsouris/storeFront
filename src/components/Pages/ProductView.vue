@@ -5,8 +5,7 @@
   </p>
 </template>
 
-<script>
-import { onMounted } from '@vue/runtime-core';
+<script lang="ts">
 import { useRoute } from 'vue-router';
 export default {
   components: {
@@ -16,9 +15,9 @@ export default {
     const route = useRoute();
     console.log(route.params.product);
 
-    const product = JSON.parse(route.params.product);
+    //const product = JSON.parse(route.params.product);
     return {
-      product,
+      // product,
     };
   },
 };

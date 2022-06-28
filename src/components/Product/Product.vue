@@ -1,12 +1,14 @@
 <template>
-  <h1 v-if="!products">Loading</h1>
+  <div v-if="!products" class="prose">
+    <h1>There is nothing here</h1>
+  </div>
   <div
     class="col-12 md:col-4 lg:col-3 mb-4 z-0"
     v-for="product in products"
     :key="product">
     <div
       class="card bg-base-100 shadow-xl hover:cursor-pointer border border-transparent hover:border-blue-500 transition-all"
-      @click="openLink(product)">
+      @click="openLink(product.id)">
       <figure>
         <img
           class="image-full"
@@ -25,34 +27,32 @@
   </div>
 </template>
 
-<script>
-import router from '../../router';
-export default {
-  components: {
-    name: 'Product',
-  },
+<script lang="ts">
+import { defineComponent } from 'vue';
+import axios from 'axios';
+export default defineComponent({
+  name: 'Product',
+  components: {},
   async created() {
-    const response = await fetch(
-      'https://api.hangme-staging.app/api/v2/marketplace/stores/2/products'
-    );
-    const data = await response.json();
-    this.products = data;
+    try {
+      const response = await axios.get(
+        'https://api.hangme-staging.app/api/v2/marketplace/stores/2/products'
+      );
+      console.log(response.data);
+      this.products = response.data;
+    } catch (error) {
+      console.error(error);
+    }
   },
   methods: {
-    openLink(product) {
-      router.push({
-        name: 'Product',
-        params: {
-          id: product.id,
-          product: JSON.stringify(product),
-        },
-      });
+    openLink(string: Number) {
+      alert(string);
     },
   },
   data() {
     return {
-      products: {},
+      products: null,
     };
   },
-};
+});
 </script>
