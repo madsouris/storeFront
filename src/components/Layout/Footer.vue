@@ -37,7 +37,9 @@
           </div>
           <div>
             <span class="footer-title">Legal</span>
-            <a class="link link-hover">Terms and conditions</a>
+            <router-link class="link link-hover" to="/terms">
+              Terms and conditions
+            </router-link>
             <a class="link link-hover">Privacy policy</a>
           </div>
         </footer>
