@@ -38,7 +38,9 @@
                   <p class="text-secondary">Subtotal</p>
                   <p class="font-bold text-primary">$3323.99</p>
                 </div>
-                <button class="btn btn-primary w-full">Checkout</button>
+                <router-link to="/checkout">
+                  <button class="btn btn-primary w-full">Checkout</button>
+                </router-link>
               </ul>
             </div>
             <label

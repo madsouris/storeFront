@@ -7,6 +7,7 @@
         <img
           src="https://api.lorem.space/image/movie?w=980"
           alt="img"
+          loading="lazy"
           class="w-full aspect-square object-cover border border-transparent hover:border-primary mb-4 md:mb-0" />
       </div>
       <div class="col-12 md:col-8 flex flex-col gap-2">
