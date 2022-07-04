@@ -5,7 +5,7 @@
         <h1 class="text-2xl font-semibold">Categories</h1>
       </div>
       <div class="col-12 lg:col-8">
-        <div class="row">
+        <div class="masonry sm:masonry-sm md:masonry-md">
           <Product />
         </div>
       </div>

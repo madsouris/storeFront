@@ -2,10 +2,7 @@
   <div v-if="!products" class="prose">
     <h1>There is nothing here</h1>
   </div>
-  <div
-    class="col-12 md:col-4 mb-4 z-0"
-    v-for="product in products"
-    :key="product">
+  <div class="break-inside z-0 mb-4" v-for="product in products" :key="product">
     <div
       class="card bg-base-100 shadow-xl hover:cursor-pointer border border-transparent hover:border-primary transition-all"
       @click.native="$router.push('/product/' + product.id)">
