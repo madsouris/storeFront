@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-4">
+  <div class="container mx-auto p-4 md:px-0">
     <div class="row">
       <Product />
     </div>
@@ -25,10 +25,11 @@
 
 <script lang="ts">
 import Product from '../Product/Product.vue';
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'Home',
   components: {
-    name: 'Home',
     Product,
   },
-};
+});
 </script>

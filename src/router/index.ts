@@ -26,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Terms',
     component: () => import('../components/Pages/Terms.vue'),
   },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: () => import('../components/Pages/Privacy.vue'),
+  },
 ];
 
 const router = createRouter({

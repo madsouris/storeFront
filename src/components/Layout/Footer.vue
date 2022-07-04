@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
     <div class="row">
       <div class="col-12">
         <footer class="footer py-10 text-base-content">
@@ -40,12 +40,17 @@
             <router-link class="link link-hover" to="/terms">
               Terms and conditions
             </router-link>
-            <a class="link link-hover">Privacy policy</a>
+            <router-link to="/privacy" class="link link-hover">
+              Privacy Policy
+            </router-link>
           </div>
         </footer>
         <div class="w-full block text-left md:text-center py-4 text-sm">
-          &copy; Copyright 2022, all right reserved. Powered by
-          <a class="text-primary" href="//hangme.app" target="_blank">Hangme</a>
+          &copy; Copyright 2022, all right reserved. <br />
+          Powered by
+          <a class="text-primary" href="//hangme.app" target="_blank"
+            >Hangme.</a
+          >
         </div>
       </div>
     </div>
@@ -53,9 +58,9 @@
 </template>
 
 <script>
-export default {
-  components: {
-    name: 'Footer',
-  },
-};
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'Footer',
+  components: {},
+});
 </script>

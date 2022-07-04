@@ -17,9 +17,9 @@
 </template>
 
 <script>
-export default {
-  components: {
-    name: 'SmallList',
-  },
-};
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'SmallList',
+  components: {},
+});
 </script>

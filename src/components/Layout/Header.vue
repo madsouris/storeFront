@@ -56,9 +56,10 @@
 <script>
 import { getStore, storeData } from '../../data';
 import SmallList from '../Product/SmallList.vue';
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'Header',
   components: {
-    name: 'Header',
     SmallList,
   },
   async created() {
@@ -74,5 +75,5 @@ export default {
       color: null,
     };
   },
-};
+});
 </script>

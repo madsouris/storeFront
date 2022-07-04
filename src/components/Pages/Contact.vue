@@ -85,10 +85,10 @@
 
 <script>
 import { getStore, storeData } from '../../data';
-export default {
-  components: {
-    name: 'Contact',
-  },
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'Contact',
+  components: {},
   async created() {
     await getStore();
     this.name = storeData.data.name;
@@ -128,5 +128,5 @@ export default {
       whatsapp: null,
     };
   },
-};
+});
 </script>
