@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import router from '../../router';
+//import router from '../../router';
 import axios from 'axios';
 export default defineComponent({
   name: 'Product',
@@ -37,6 +37,7 @@ export default defineComponent({
         'https://api.hangme-staging.app/api/v2/marketplace/stores/2/products'
       );
       console.log(response.data);
+      //console.log(this.$router.currentRoute.path);
       this.products = response.data;
     } catch (error) {
       console.error(error);

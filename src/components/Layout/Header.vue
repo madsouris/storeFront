@@ -31,7 +31,7 @@
               <ul
                 tabindex="0"
                 class="dropdown-content menu shadow-xl bg-base-100 rounded-box w-96">
-                <li class="p-4 font-bold text-xl">Cart</li>
+                <li class="p-4 font-semibold text-xl">Cart</li>
                 <SmallList v-for="product in 4" :key="product" />
                 <div
                   class="flex flex-row flex-nowrap justify-between items-center p-4">
