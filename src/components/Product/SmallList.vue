@@ -6,7 +6,7 @@
       src="http://placekitten.com/g/200/300"
       alt="Shoes" />
     <div class="flex flex-col flex-wrap">
-      <p class="font-semibold text-clip text-clip">Some fashion shit</p>
+      <p class="font-semibold text-clip">Some fashion shit</p>
       <p class="font-bold text-primary mb-2">$34.90</p>
       <p class="flex flex-row items-center">
         <button
