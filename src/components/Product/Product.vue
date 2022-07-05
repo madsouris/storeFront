@@ -8,8 +8,8 @@
       @click.native="$router.push('/product/' + product.id)">
       <figure>
         <img
-          class="image-full"
-          src="https://api.lorem.space/image/fashion?w=400&h=225"
+          class="w-full aspect-square object-cover"
+          src="https://api.lorem.space/image/fashion?w=500"
           alt="Shoes" />
       </figure>
       <div class="card-body gap-0 p-4">
